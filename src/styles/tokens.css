@@ -1,0 +1,31 @@
+:root {
+  color-scheme: dark;
+  --canvas: #101014;
+  --surface-1: #18181c;
+  --surface-2: #202024;
+  --surface-glass: rgb(24 24 28 / 78%);
+  --text-primary: #fff;
+  --text-secondary: rgb(255 255 255 / 66%);
+  --text-muted: rgb(255 255 255 / 42%);
+  --accent: #26bbff;
+  --accent-hover: #72d3ff;
+  --line: rgb(255 255 255 / 10%);
+  --line-strong: rgb(255 255 255 / 17%);
+  --font-display: 'Inter Tight', Inter, 'Helvetica Neue', Arial, sans-serif;
+  --font-body: Inter, 'Helvetica Neue', Arial, sans-serif;
+  --space-1: 1rem;
+  --space-2: 1.5rem;
+  --space-3: 2rem;
+  --space-4: 2.5rem;
+  --space-5: 3rem;
+  --space-6: 3.5rem;
+  --space-7: 4rem;
+  --space-8: 5rem;
+  --container: 90rem;
+  --page-gutter: clamp(1.25rem, 5.4vw, 5.5rem);
+  --header-height: 4.5rem;
+  --radius-card: 1.5rem;
+  --radius-media: 1.75rem;
+  --radius-button: 0.5rem;
+  --ease-out: cubic-bezier(0.2, 0.75, 0.25, 1);
+}
