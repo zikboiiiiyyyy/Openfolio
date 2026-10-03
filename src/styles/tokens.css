@@ -3,16 +3,16 @@
   --canvas: #101014;
   --surface-1: #18181c;
   --surface-2: #202024;
-  --surface-glass: rgb(24 24 28 / 78%);
+  --surface-glass: rgb(24 24 28 / 88%);
   --text-primary: #fff;
-  --text-secondary: rgb(255 255 255 / 66%);
-  --text-muted: rgb(255 255 255 / 42%);
+  --text-secondary: rgb(255 255 255 / 72%);
+  --text-muted: rgb(255 255 255 / 48%);
   --accent: #26bbff;
   --accent-hover: #72d3ff;
-  --line: rgb(255 255 255 / 10%);
-  --line-strong: rgb(255 255 255 / 17%);
-  --font-display: 'Inter Tight', Inter, 'Helvetica Neue', Arial, sans-serif;
-  --font-body: Inter, 'Helvetica Neue', Arial, sans-serif;
+  --line: rgb(255 255 255 / 12%);
+  --line-strong: rgb(255 255 255 / 20%);
+  --font-display: 'Manrope', 'Inter Tight', Inter, 'Helvetica Neue', Arial, sans-serif;
+  --font-body: 'DM Sans', Inter, 'Helvetica Neue', Arial, sans-serif;
   --space-1: 1rem;
   --space-2: 1.5rem;
   --space-3: 2rem;
@@ -28,4 +28,8 @@
   --radius-media: 1.75rem;
   --radius-button: 0.5rem;
   --ease-out: cubic-bezier(0.2, 0.75, 0.25, 1);
+}
+
+:root[data-theme='light'] {
+  color-scheme: light;
 }

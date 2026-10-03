@@ -1,5 +1,5 @@
 import { useEffect, useRef, type KeyboardEvent } from 'react';
-import { navigation } from '../data/navigation';
+import { portfolio } from '../data/portfolio';
 
 type MobileMenuProps = {
   isOpen: boolean;
@@ -8,6 +8,7 @@ type MobileMenuProps = {
 
 export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
   const panelRef = useRef<HTMLElement>(null);
+  const { accessibility } = portfolio.copy;
 
   useEffect(() => {
     if (!isOpen) return;
@@ -53,27 +54,27 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
         ref={panelRef}
         className="mobile-menu__panel"
         id="mobile-navigation"
-        aria-label="Mobile navigation"
+        aria-label={accessibility.mainNavigation}
         aria-modal={isOpen ? 'true' : undefined}
         role="dialog"
         onKeyDown={handleKeyDown}
       >
         <div className="mobile-menu__topline">
-          <span className="eyebrow">Explore</span>
-          <button className="icon-button mobile-menu__close" type="button" onClick={onClose} aria-label="Close menu">
+          <span className="eyebrow">{portfolio.copy.mobileMenu.heading}</span>
+          <button className="icon-button mobile-menu__close" type="button" onClick={onClose} aria-label={accessibility.closeMenu}>
             <span aria-hidden="true">×</span>
           </button>
         </div>
         <div className="mobile-menu__links">
-          {navigation.map((item, index) => (
+          {portfolio.navigation.items.map((item, index) => (
             <a key={item.href} href={item.href} onClick={onClose}>
-              <span className="mobile-menu__index">0{index + 1}</span>
+              <span className="mobile-menu__index">{String(index + 1).padStart(2, '0')}</span>
               <span>{item.label}</span>
               <span className="mobile-menu__arrow" aria-hidden="true">↗</span>
             </a>
           ))}
         </div>
-        <p className="mobile-menu__note">A portfolio in progress. Sample work and profile details are placeholders.</p>
+        <p className="mobile-menu__note">{portfolio.copy.mobileMenu.note}</p>
       </nav>
     </div>
   );

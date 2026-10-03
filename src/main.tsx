@@ -5,6 +5,7 @@ import './styles/reset.css';
 import './styles/tokens.css';
 import './styles/globals.css';
 import './styles/layout.css';
+import './styles/theme.css';
 import './styles/motion.css';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(

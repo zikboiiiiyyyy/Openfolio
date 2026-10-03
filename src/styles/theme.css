@@ -1,0 +1,219 @@
+.site-header {
+  border-bottom-color: var(--line);
+  background: var(--surface-glass);
+}
+
+.hero__tagline {
+  color: var(--text-secondary);
+}
+
+.hero__float-card {
+  border-color: var(--line-strong);
+  background: var(--surface-glass);
+}
+
+.mobile-menu__panel {
+  background:
+    radial-gradient(ellipse at 100% 0, color-mix(in srgb, var(--accent-fill) 10%, transparent), transparent 25rem),
+    var(--canvas);
+}
+
+.media-frame {
+  background: linear-gradient(145deg, var(--surface-2), var(--surface-1) 70%);
+}
+
+.media-frame__fallback {
+  background:
+    radial-gradient(ellipse at 70% 38%, color-mix(in srgb, var(--accent-fill) 14%, transparent), transparent 34%),
+    linear-gradient(140deg, var(--surface-2), var(--canvas) 72%);
+}
+
+.project-card__image-link {
+  background: var(--surface-1);
+}
+
+.service-card {
+  background: var(--surface-1);
+}
+
+.service-card:hover {
+  background: var(--surface-2);
+}
+
+.contact-section__panel {
+  background:
+    radial-gradient(ellipse at 92% 10%, color-mix(in srgb, var(--accent-fill) 13%, transparent), transparent 31rem),
+    linear-gradient(145deg, var(--surface-2), var(--surface-1) 75%);
+}
+
+.theme-toggle {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  min-height: 2.65rem;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  padding: 0.55rem 0.78rem;
+  color: var(--text-secondary);
+  background: transparent;
+  font-size: 0.67rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+.theme-toggle:hover {
+  border-color: var(--accent);
+  color: var(--text-primary);
+  background: color-mix(in srgb, var(--accent-fill) 7%, transparent);
+}
+
+.theme-toggle__icon {
+  color: var(--accent);
+  font-size: 0.95rem;
+  line-height: 1;
+}
+
+.about-section__portrait {
+  max-width: 17rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-card);
+}
+
+.about-section__portrait .media-frame {
+  border-radius: inherit;
+}
+
+.project-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem 1rem;
+  margin-top: 1rem;
+}
+
+.project-card__actions a {
+  color: var(--text-secondary);
+  font-size: 0.68rem;
+  font-weight: 600;
+  transition: color 180ms ease;
+}
+
+.project-card__actions a:hover {
+  color: var(--accent-hover);
+}
+
+.project-card__notes {
+  margin-top: 1rem;
+  border-top: 1px solid var(--line);
+  padding-top: 0.75rem;
+}
+
+.project-card__notes summary {
+  width: fit-content;
+  color: var(--text-muted);
+  font-size: 0.67rem;
+  cursor: pointer;
+}
+
+.project-card__notes[open] summary {
+  margin-bottom: 0.8rem;
+  color: var(--text-primary);
+}
+
+.project-card__notes > p {
+  color: var(--text-secondary);
+  font-size: 0.76rem;
+  line-height: 1.7;
+}
+
+.project-card__notes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.project-card__notes-grid h4,
+.case-study__notes h3 {
+  margin-bottom: 0.5rem;
+  color: var(--text-muted);
+  font-size: 0.59rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.project-card__notes-grid ul,
+.case-study__notes ul {
+  display: grid;
+  gap: 0.45rem;
+  padding-left: 1rem;
+  color: var(--text-secondary);
+  font-size: 0.7rem;
+  line-height: 1.6;
+}
+
+.case-study__notes {
+  display: grid;
+  gap: 1.2rem;
+  margin-top: 1.35rem;
+  border-top: 1px solid var(--line);
+  padding-top: 1rem;
+}
+
+.case-study__notes h3 {
+  margin-bottom: 0.55rem;
+}
+
+.education-section {
+  border-top: 1px solid var(--line);
+}
+
+:root[data-theme='light'] body {
+  background:
+    radial-gradient(ellipse at 72% 8%, color-mix(in srgb, var(--accent-fill) 7%, transparent), transparent 33rem),
+    var(--canvas);
+}
+
+@media (max-width: 900px) {
+  .theme-toggle {
+    width: 2.65rem;
+    min-height: 2.65rem;
+    padding: 0;
+  }
+
+  .theme-toggle__label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    clip-path: inset(50%);
+  }
+}
+
+@media (max-width: 700px) {
+  .project-card__notes-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.hero__float-value {
+  white-space: pre-line;
+}
+
+.case-study__description {
+  max-width: 52rem;
+  margin-top: 1.25rem;
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  line-height: 1.75;
+}
+
+:root {
+  --accent-fill: var(--accent);
+  --accent-fill-hover: var(--accent-hover);
+}

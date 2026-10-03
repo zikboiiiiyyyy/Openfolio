@@ -106,7 +106,7 @@ a:focus:not(:focus-visible) {
 }
 
 .section-title span {
-  color: rgb(255 255 255 / 42%);
+  color: var(--text-muted);
 }
 
 .body-copy {
@@ -126,7 +126,7 @@ a:focus:not(:focus-visible) {
   height: 0.42rem;
   border-radius: 50%;
   background: var(--accent);
-  box-shadow: 0 0 14px rgb(38 187 255 / 65%);
+  box-shadow: 0 0 14px color-mix(in srgb, var(--accent-fill) 65%, transparent);
 }
 
 @media (prefers-reduced-motion: reduce) {

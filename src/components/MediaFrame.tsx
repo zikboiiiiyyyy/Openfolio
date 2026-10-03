@@ -81,7 +81,7 @@ export function MediaFrame({
         />
       ) : (
         <div className="media-frame__fallback" role="img" aria-label={alt}>
-          <span className="media-frame__fallback-mark" aria-hidden="true">AV</span>
+          <span className="media-frame__fallback-mark" aria-hidden="true">{portfolio.personal.monogram}</span>
           <span>{fallback}</span>
         </div>
       )}
@@ -89,3 +89,4 @@ export function MediaFrame({
     </div>
   );
 }
+import { portfolio } from '../data/portfolio';
